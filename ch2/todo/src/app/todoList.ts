@@ -1,7 +1,7 @@
 import { TodoItem } from "./todoItem";
 
 export class TodoList {
-  constructor(publice user: string, private todoItems: TodoItem[] = []) {
+  constructor(public user: string, private todoItems: TodoItem[] = []) {
 
   }
 
