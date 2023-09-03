@@ -9,7 +9,7 @@ import { TodoItem } from './todoItem';
 })
 export class AppComponent {
   title = 'todo';
-  private list = new TodoList("Bob", [
+  private list = new TodoList("Matt", [
     new TodoItem("Go for walk", true),
     new TodoItem("Clean litterboxes"),
     new TodoItem("Make lunch"),
