@@ -1,7 +1,8 @@
-import { Component, IterableDiffer, IterableDiffers } from "@angular/core";
+import { Component, IterableDiffer, IterableDiffers, ViewChild } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 import { Product } from "../model/product.model";
 import { ProductRepository } from "../model/product.repository";
+import { MatPaginator } from "@angular/material/paginator";
 
 
 @Component({
@@ -27,5 +28,14 @@ export class ProductTableComponent {
 
     deleteProduct(id: number) {
         this.repository.deleteProduct(id);
+    }
+
+    @ViewChild(MatPaginator)
+    paginator? : MatPaginator
+
+    ngAfterViewInit() {
+        if (this.paginator) {
+            this.dataSource.paginator = this.paginator;
+        }
     }
 }
