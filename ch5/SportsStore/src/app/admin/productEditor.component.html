@@ -1,6 +1,6 @@
 <h3 class="heading">{{editing ? "Edit" : "Create" }} Product</h3>
 
-<form (ngSumbit)="save()">
+<form (ngSubmit)="save()">
   <mat-form-field>
     <mat-label>ID</mat-label>
     <input matInput name="id" [(ngModel)]="product.id" disabled />

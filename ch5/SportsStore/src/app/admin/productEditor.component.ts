@@ -14,14 +14,14 @@ export class ProductEditorComponent {
     constructor(private repository: ProductRepository,
         private router: Router,
         activeRoute: ActivatedRoute) {
-            this.editing = activeRoute.snapshot.params["mode"] == "edit";
-            if (this.editing) {
-                Object.assign(this.product, repository.getProduct(activeRoute.snapshot.params["id"]));
-            }
+        this.editing = activeRoute.snapshot.params["mode"] == "edit";
+        if (this.editing) {
+            Object.assign(this.product, repository.getProduct(activeRoute.snapshot.params["id"]));
         }
+    }
 
-        save() {
-            this.repository.saveProduct(this.product);
-            this.router.navigateByUrl("/admin/main/products");
-        }
+    save() {
+        this.repository.saveProduct(this.product);
+        this.router.navigateByUrl("/admin/main/products");
+    }
 }
