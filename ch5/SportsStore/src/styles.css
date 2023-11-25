@@ -30,3 +30,11 @@ table[mat-table] + button[mat-flat-button] { margin-top: 10px;}
 .bottom-box { background-color: white; padding-bottom: 20px;}
 .bottom-box > button[mat-flat-button] { margin-top: 10px;}
 .bottom-box mat-paginator { float: right; font-size: 14px;}
+
+mat-checkbox { margin: 10px; font-size: large; }
+td.no-data { font-size: large; margin: 10px; display: block; }
+table.orders tbody, table.orders thead { vertical-align: top; }
+table.orders td { padding-top: 10px; }
+table.orders table th:first-of-type, table.orders table td:first-of-type {
+  margin: 0; padding: 0;
+}
